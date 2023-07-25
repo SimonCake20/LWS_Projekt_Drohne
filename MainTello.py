@@ -35,9 +35,11 @@ def getKeyboardInput():
         cv2.imwrite(f"tellopy/Resources/Images/{time.time()}.jpg", img)
         time.sleep(0.3)
 
+    elif kp.getKey("f"):    flip(r)
+
     return [lr, fb, ud, yv]  # Return The Given Value
 
-def flip(): Drone.flip()
+def flip(direction): Drone.flip(direction)    #r,l,f,b als Flip-Richtung mit angeben
 
 # Initialize Keyboard Input
 kp.init()
